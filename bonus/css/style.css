@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(127, 255, 212, 0.75);
+}
+.content {
+    background-color: rgb(243, 222, 129);
+    padding: 25px;
+    border-radius: 25px;
+}
+hr {
+    margin: 30px 0;
+}
+/* List */
+ul {
+    font-size: 20px;
+    list-style-type: none;
+    padding-left: 0;
+}
+li {
+    margin: 10px 0;
+}
+.task-text {
+    margin-right: 50px;
+}
+.task-btns {
+    white-space: nowrap;
+}
+.task-btns button:nth-child(2) {
+    margin: 0 15px;
+}
+i {
+    width: 20px;
+    color: white;
+}
+/* Add Task */
+input {
+    margin-right: 20px;
+}
+/* Status */
+.task-done {
+    text-decoration: line-through;
+}
