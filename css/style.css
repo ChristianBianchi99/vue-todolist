@@ -28,3 +28,7 @@ li {
 input {
     margin-right: 20px;
 }
+/* Status */
+.task-done {
+    text-decoration: line-through;
+}

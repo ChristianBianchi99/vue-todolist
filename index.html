@@ -21,8 +21,20 @@
                     <hr>
                     <!-- List -->
                     <ul>
-                        <li v-for="task in tasks">
-                            {{task.text}}
+                        <li v-for="(task, index) in tasks">
+                            <div class="task-row d-flex justify-content-between">
+                                <div class="task-text" :class="task.done=== true ? 'task-done' : ''">
+                                    {{task.text}}
+                                </div>
+                                <div class="task-btns">
+                                    <button @click="changeTaskStatus(task)">
+                                        <i class="fa-solid" :class="task.done=== true ? 'fa-check' : 'fa-xmark'"></i>
+                                    </button>
+                                    <button @click="deleteTask(index)">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                     <hr>

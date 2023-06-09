@@ -14,7 +14,7 @@ createApp({
                 },
                 {
                     text    : "Fare 100 piegamenti, 100 squat, 100 addominali e 10km di corsa",
-                    done    : false,
+                    done    : true,
                 },
                 {
                     text    : "Diventare 'Invincibile sotto il sole'",
@@ -22,7 +22,7 @@ createApp({
                 },
                 {
                     text    : "Diventare Hokage",
-                    done    : false,
+                    done    : true,
                 },
                 {
                     text    : "Riunire le sette sfere del drago",
@@ -30,5 +30,13 @@ createApp({
                 },
             ]
         }
-    }
+    },
+    methods: {
+        changeTaskStatus(task){
+            task.done = !task.done
+        },
+        deleteTask(index){
+            this.tasks.splice(index, 1)
+        }
+    },
 }).mount('#app');
