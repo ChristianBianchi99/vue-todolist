@@ -27,10 +27,10 @@
                                     {{task.text}}
                                 </div>
                                 <div class="task-btns">
-                                    <button @click="changeTaskStatus(task)">
+                                    <button class="btn" :class="task.done=== true ? 'btn-success' : 'btn-secondary'" @click="changeTaskStatus(task)">
                                         <i class="fa-solid" :class="task.done=== true ? 'fa-check' : 'fa-xmark'"></i>
                                     </button>
-                                    <button @click="deleteTask(index)">
+                                    <button class="btn btn-danger" @click="deleteTask(index)">
                                         <i class="fa-solid fa-trash"></i>
                                     </button>
                                 </div>
@@ -40,8 +40,8 @@
                     <hr>
                     <!-- Add Task -->
                     <div class="new-tasks d-flex">
-                        <input type="text" class="form-control">
-                        <button class="btn btn-primary">
+                        <input type="text" class="form-control" placeholder="Aggiungi una nuova task" v-model="newTask" @keyup.enter="addTask">
+                        <button class="btn btn-primary" @click="addTask">
                             Add
                         </button>
                     </div>

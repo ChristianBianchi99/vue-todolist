@@ -24,6 +24,19 @@ ul {
 li {
     margin: 10px 0;
 }
+.task-text {
+    margin-right: 50px;
+}
+.task-btns {
+    white-space: nowrap;
+}
+.task-btns button:first-child {
+    margin-right: 15px;
+}
+i {
+    width: 20px;
+    color: white;
+}
 /* Add Task */
 input {
     margin-right: 20px;
